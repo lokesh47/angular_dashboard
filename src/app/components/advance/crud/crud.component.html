@@ -1,0 +1,83 @@
+<div class="container right_content">
+    <div class="page-title">
+      <div class="title_left">
+        <h3>Crud Operation</h3>
+      </div>
+    </div>
+    <div class="row">  
+        <div class="col-sm-2">
+            <button (click) = "show_user_block()" value="Create User" class="btn btn-primary nml15 ">{{button_text}}</button>
+          </div>
+          <div class="col-sm-3 nml15" *ngIf="search_data">
+            <input type="text" placeholder="Search" (keyup) = "get_filter_data($event.target.value)" class="form-control">
+        </div>
+    </div>
+
+    <div class="row mt10"  *ngIf="form_data">   
+      <form novalidate [formGroup] = "Userform" (ngSubmit)="create_user()" class="form-inline">
+        <div class="col-sm">
+          <label>Name</label>
+        </div>
+        <div class="col-sm">
+          <input type="text" formControlName="name" class="form-control">
+        </div>
+
+        <div class="col-sm">
+          <label>Address</label>
+        </div>
+        <div class="col-sm">
+          <input type="text" formControlName="address" class="form-control">
+        </div>
+
+        <div class="col-sm">
+          <label>Email</label>
+        </div>
+        <div class="col-sm">
+          <input type="text" formControlName="email"  class="form-control">
+        </div>
+        
+        <div class="col-sm">
+          <button [disabled]="!Userform.valid" class="btn btn-primary">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+
+  <div class="row header">
+    <div class="col-sm">
+      #
+    </div>
+    <div class="col-sm">
+        Name
+    </div>
+    <div class="col-sm">
+      Address
+    </div>
+    <div class="col-sm">
+      Email
+    </div>
+    <div class="col-sm">
+     Action
+    </div>
+  </div>
+
+  <div class="row user_content" *ngFor="let emp of employee">
+    <div class="col-sm">
+      {{emp.id}}
+    </div>
+    <div class="col-sm">
+      {{emp.name}}
+    </div>
+    <div class="col-sm">
+      {{emp.address}}
+    </div>
+    <div class="col-sm">
+      {{emp.email}}
+    </div>
+    <div class="col-sm">
+      <a (click)="updateEmployee(emp)"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+      <a (click)="delete_employee(emp)" class="ml5"><i class="fa fa-trash " aria-hidden="true"></i></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="right_content">
+  <div class="page-title">
+    <div class="title_left">
+      <h3>Input and Output</h3>
+    </div>
+  </div>
+
+  <h4>Parent component</h4>
+  <input type="text" #parenttext (keyup)="0"> 
+  <p>Value of the child component===> {{childdata}}</p>
+  <app-child (childEvent)="childdata=$event" [ParentData]="parenttext.value"></app-child>
+</div>

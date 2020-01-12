@@ -1,0 +1,132 @@
+<div class="right_content">
+  <div class="page-title">
+    <div class="title_left">
+      <h3>DataTypes</h3>
+    </div>
+  </div>
+  <ul>
+    <li>String : {{title}}</li>
+    <li>Number : {{age}}</li>
+
+    <li>Array</li>
+
+    <li>Number : {{lucky_number}}</li>
+    <li>String : {{fav_games}}</li>
+    <ol>
+      <li>Number:
+        <ul *ngFor="let n of lucky_number">
+          <li>{{n}}</li>
+        </ul>
+      </li>
+      <li>String :
+        <ol *ngFor="let n of fav_games; let i=index;">
+          <p>{{i+1}}.{{n}}</p>
+        </ol>
+      </li>
+    </ol>
+    <li>Any : {{fav_icecream}}</li>
+    <li>Boolean : {{isvalid}}</li>
+    <li>Tuple : {{dob}}</li>
+    <li>Object : {{student | json}}</li>
+    <li>Class : {{empolyees1 | json}}</li>
+    <li>Class : {{empolyees2 | json}}</li>
+  </ul>
+
+  
+
+
+
+  <h4>Forms</h4>
+  <ul>
+    <li>Template driven Form</li>
+    <ol>
+      <li>NgForm</li>
+      <li>NgModel</li>
+    </ol>
+
+    <!-- 
+      1. Defination
+
+      constructor(
+      public id: number,
+      public name: string,
+      public power: string,
+      public alterEgo?: string
+    ) {  }
+
+    2.submite
+    onSubmit() { this.submitted = true; }
+     3.HTML tempalte
+
+     <div class="container">
+    <h1>Hero Form</h1>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="alterEgo">Alter Ego</label>
+            <input type="text" class="form-control" id="alterEgo">
+          </div>
+
+          <button type="submit" class="btn btn-success">Submit</button>
+
+        </form>
+    </div>
+    -->
+    <li>Reactive Form</li>
+    <ol>
+      <li>Form Control</li>
+      <li>Form Group</li>
+      <li>Form Builder</li>
+    </ol>
+
+    <!--
+
+  1. Declaration 
+  import { FormGroup, FormControl } from '@angular/forms';
+  
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    
+    address: new FormGroup({
+      street: new FormControl(''),
+      city: new FormControl(''),
+      state: new FormControl(''),
+      zip: new FormControl('')
+    })
+  });
+
+  2. getting form values
+  onSubmit() {
+  
+  console.warn(this.profileForm.value);
+  }
+
+  3. HTML template
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+</form>
+
+-->
+  </ul>
+</div>
+
+
+<div>
+
+  <bdi>Lokesh A</bdi>
+</div>

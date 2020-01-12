@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "name": "Lokesh R",
+      "address": "Shimoga",
+      "email": "lokeshrraj@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Nikin",
+      "address": "Shimoga",
+      "email": "nikin@riversilica.com",
+      "id": 2
+    },
+    {
+      "name": "Imran",
+      "address": "Bijapur",
+      "email": "imran@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "RAJU MUNISWAMY",
+      "address": "HARIGE COLONY, VIDYANAGAR",
+      "email": "lokeshrraj@gmail.com",
+      "id": 4
+    }
+  ]
+}

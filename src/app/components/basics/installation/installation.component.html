@@ -1,0 +1,78 @@
+<div class="right_content">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Installation</h3>
+        </div>
+    </div>
+
+    <ul>
+        <h6>Installing Angular CLI using the npm package manager</h6>
+        <li>
+            npm install -g @angular/cli
+        </li>
+    </ul>
+    <ul>
+        <h6>unstalling Angular CLI using the npm package manager</h6>
+        <li>
+            npm uninstall -g @angular/cli
+        </li>
+    </ul>
+
+    <ul>
+        <h6>To create, build, and serve a new, basic Angular project on a development server, go to the parent directory
+            of your new workspace use the following commands:</h6>
+        <li>
+            ng new my-first-project
+        </li>
+        <li>
+            cd my-first-project
+        </li>
+        <li>
+            ng serve / ng serve --host 0.0.0.0(example ng serve -host 10.0.90.30)
+        </li>
+    </ul>
+    <img src="assets/images/Workflow.JPG" class="img-responsive" width="100%" height="70%">
+    <ul>
+        <h6>To generate components,services,modules,pipe</h6>
+        <li>
+            ng generate component User / ng g component User
+        </li>
+        <li>
+            ng generate service User / ng g service User
+        </li>
+        <li>
+            ng generate module User / ng g module User
+        </li>
+    </ul>
+
+    <ul>
+        <h6>To build project </h6>
+        <li>
+            ng build --prod
+        </li>
+        <ol>
+            <li>Source mapping - Exact each file location can be identified if it is true.(In prod by
+                default is false)</li>
+            <li> Minification – removing all the white spaces (compressing).</li>
+            <li>Uglification - changing all the variables and function names while compressing.</li>
+            <li>Tree shaking - excludes all the un used component while building</li>
+            <li>AOT - The AOT compiler detects and reports template binding errors during the build
+                step before users can see them. AOT compiles HTML templates and components into
+                JavaScript files long before they are served to the client. With no templates to read and
+                no risky client-side HTML or JavaScript evaluation, there are fewer opportunities for
+                injection attacks.</li>
+        </ol>
+    </ul>
+    <ul>
+        <h6>To load Bootstrap </h6>
+        <li>
+            npm install bootstrap@ --save
+        </li>
+        <li>
+            copy below code in angular-cli.json
+        </li>
+        <li>
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css", in style[]
+        </li>
+    </ul>
+</div>

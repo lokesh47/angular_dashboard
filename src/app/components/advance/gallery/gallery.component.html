@@ -1,0 +1,24 @@
+<div class="container right_content">
+  <div class="row">
+    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12" *ngFor="let emp of images">
+      <div *ngFor="let im of emp.images">
+        <div class="">
+          <h3>
+            {{emp.account_url}}
+          </h3>
+          <div *ngIf="im.type=='image/jpeg'">
+            <img [src]="im.link" alt={{im.link}} style="width:100%" class="img-responsive" width="307" height="240" >
+          </div>
+          <div *ngIf="im.type =='video/mp4'">
+            <video width="307" height="240"  [src]="im.mp4" controls>
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="caption">
+            <p>{{emp.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

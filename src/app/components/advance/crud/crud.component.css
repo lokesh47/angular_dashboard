@@ -1,0 +1,42 @@
+.row
+{
+    margin-top:3px;
+}
+.btn 
+{
+    margin-left:2px;
+    background: #000;
+    border-color:#000;
+}
+
+.header
+{
+    background: #000;
+    border-radius: 10px 10px 0px 0px;
+    border:2px solid #EFEFEF;
+    height:45px;
+    margin-top:10px;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10px;
+}
+
+.user_content
+{
+    border:1px solid #EFEFEF;
+}
+.mt10
+{
+    margin-top:10px;
+}
+
+.ml5
+{
+    margin-left:5px;
+}
+
+.nml15
+{
+    margin-left:-15px !important;
+}
+

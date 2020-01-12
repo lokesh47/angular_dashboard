@@ -1,0 +1,83 @@
+<div class="right_content">
+  <div class="page-title">
+    <div class="title_left">
+      <h3>Pipes</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <p><b>BuiltIn Pipes:</b></p>
+  </div>
+
+  <div class="row">  
+    <p>Uppercase: <span><b>{{title | uppercase}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Lowercase: <span><b>{{title | lowercase}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Currency: <span><b>{{6589.23 | currency:"USD"}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Currency: <span><b>{{6589.23 | currency:"USD":true}}</b> (Boolean true is used to get the sign of the currency)</span></p>
+  </div>
+
+  <div class="row">
+    <p>Date : <span><b>{{todaydate | date:'d/M/y'}}</b> (Date) </span></p>
+  </div>
+  <div class="row">
+    <p>Date : <span><b>{{todaydate | date:'shortTime'}}</b> (Time) </span></p>
+  </div>
+
+  <div class="row">
+    <p>Decimal :<span><b>{{ 454.78787814 | number: '3.4-4' }}</b> (3 is for main integer, 4 -4 are for integers to be displayed) </span></p>
+  </div>
+
+  <div class="row">
+    <p>Json: <span><b>{{ jsonval | json }}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Percent: <span><b>{{00.54565 | percent}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Slice: <span><b>{{months | slice:2:6}}</b>( Here 2 and 6 refers to the start and the end index)</span></p>
+  </div>
+
+  <div class="row">
+    <p><b>Creating Custom Pipes:</b></p>
+  </div>
+  
+  <div class="row">
+    <p>Command: ng g pipe sizeconvert</p>
+  </div>
+
+  <div class="row">
+    <p>Square root of 25 is:<span><b> {{25 | sqrt}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Square root of 729 is:<span><b> {{729 | sqrt}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Square root of 654 is:<span><b> {{654 | sqrt}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Size Coversion of 1024 bytes to KB :<span><b> {{1024 | sizeconvert:'2':'4'}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Size Coversion of 1048576 bytes to MB :<span><b> {{1048576 | sizeconvert:'2':'4'}}</b></span></p>
+  </div>
+
+  <div class="row">
+    <p>Size Coversion of 1073741824 bytes to GB :<span><b> {{1073741824 | sizeconvert:'2':'4'}}</b></span></p>
+  </div>
+
+</div>
